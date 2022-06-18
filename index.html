@@ -12,24 +12,45 @@
   header {
    background-color:black;
    color:dodgerblue;
-   //color:deepskyblue;
    font-size:63px;
+  }
+  #main {
+   display:grid;
+   grid-template-columns:3fr 1fr;
+   grid-gap:0.5em;
+   margin:0.5em;
+  }
+  #main > div {
+   border:1px solid black;
+   border-radius:0.5em;
+  }
+  #actions {
+   background-color:black;
+  }
+  #title {
+   color:dodgerblue;
+   font-size:30px;
+   text-align:center;
   }
  </style>
  <script>
   window.onload = function() {
-   var passport = {
-    name:"Vadim",
-    date:"02.12.2006",
+   var mainpanel = document.getElementById("mainpanel");
+   
+   for (var x = 0;x<15;x++) {
+    mainpanel.appendChild(document.createTextNode(""));
+    mainpanel.appendChild(document.createElement("br"));
    }
-   var json = JSON.stringify(passport);
-   var js = document.getElementById("js");
-   js.appendChild(document.createTextNode(json));
   };
  </script>
 </head>
 <body>
- <header>IVG.py</header><br>
- <div id="js"></div>
+ <header>IVG.py</header>
+ <div id="main">
+  <div id="mainpanel"></div>
+  <div id="actions">
+   <div id="title">Actions</div>
+  </div>
+ </div>
 </body>
 </html>
