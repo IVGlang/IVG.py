@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Website</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+  * {
+   margin:0px;
+   padding:0px;
+  }
+  header {
+   background-color:black;
+   color:dodgerblue;
+   //color:deepskyblue;
+   font-size:63px;
+  }
+ </style>
+ <script>
+  window.onload = function() {
+   var passport = {
+    name:"Vadim",
+    date:"02.12.2006",
+   }
+   var json = JSON.stringify(passport);
+   var js = document.getElementById("js");
+   js.appendChild(document.createTextNode(json));
+  };
+ </script>
+</head>
+<body>
+ <header>IVG.py</header><br>
+ <div id="js"></div>
+</body>
+</html>
