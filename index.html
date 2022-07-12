@@ -59,9 +59,9 @@
       panel.style.margin = "0.5em";
       panel.style.gridTemplateColumns = "1fr";
       panel.style.gridGap = "0.5em";
-      panel.style.gridAutoRows = "minmax(0, 20em)";
     
       if (mode == "news") {
+          panel.style.gridAutoRows = "minmax(0, 20em)";
           //info = document.createElement("div");
           //info.style.border = "1px solid black";
           //info.style.borderRadius = "0.5em";
@@ -74,7 +74,20 @@
           panel.appendChild(wine);
       } else if (mode == "softs") {
           panel.style.gridTemplateColumns = "1fr 1fr 1fr";
-          
+          for (item of [["Storage", [], []]]) {
+              soft = document.createElement("div");
+              soft.style.border = "1px solid black";
+              soft.style.borderRadius = "0.5em";
+              soft.style.marginLeft = "1.5em";
+              soft.style.marginRight = "1.5em";
+
+              title = document.createElement("p");
+              title.appendChild(document.createTextNode(item[0]));
+              title.id = "title";
+              soft.appendChild(title);
+
+              panel.appendChild(soft);
+          }
       } else if (mode == "archive") {
           panel.style.gridTemplateColumns = "1fr 1fr 1fr";
       }
