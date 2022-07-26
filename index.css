@@ -1,0 +1,49 @@
+* {
+  margin:0px;
+  padding:0px;
+}
+header {
+  background-color:black;
+  color:dodgerblue;
+}
+#header {
+  font-size:40px;
+}
+#login, #register {
+  font-size:25px;
+  cursor:pointer;
+}
+#window {
+  display:none;
+  position:absolute;
+  z-index:999;
+  width:60%;
+  top:4em;
+  left:19.75em;
+  border:1px solid black;
+  border-radius:0.5em;
+  background-color:white;
+}
+#buttons {
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr 1fr;
+  grid-gap:0.5em;
+  margin:0.5em;
+}
+#buttons > div {
+  border:1px solid black;
+  border-radius:0.5em;
+  text-align:center;
+  font-size:22px;
+  color:dodgerblue;
+  cursor:pointer;
+}
+#panel > div {
+  border:1px solid black;
+  border-radius:0.5em;
+}
+#title {
+  color:dodgerblue;
+  font-size:21px;
+  text-align:center;
+}
