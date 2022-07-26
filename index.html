@@ -12,7 +12,7 @@
   header {
    background-color:black;
    color:dodgerblue;
-   font-size:50px;
+   font-size:45px;
   }
   #window {
    display:none;
@@ -35,9 +35,9 @@
    border:1px solid black;
    border-radius:0.5em;
    text-align:center;
-   font-size:23px;
+   font-size:21px;
    color:dodgerblue;
-   corsor:pointer;
+   cursor:pointer;
   }
   #panel > div {
    border:1px solid black;
@@ -45,7 +45,7 @@
   }
   #title {
    color:dodgerblue;
-   font-size:22px;
+   font-size:21px;
    text-align:center;
   }
  </style>
@@ -90,12 +90,12 @@
           main.appendChild(wine);
       } else if (mode == "softs") {
           main.style.gridTemplateColumns = "1fr 1fr 1fr";
-          for (item of [["Notes", [], []], ["TextEditor", [], []]]) {
+          for (item of [
+                       ["Notes", [], []],
+                       ]) {
               soft = document.createElement("div");
               soft.style.border = "1px solid black";
               soft.style.borderRadius = "0.5em";
-              //soft.style.marginLeft = "0.5em";
-              //soft.style.marginRight = "0.5em";
 
               title = document.createElement("p");
               title.appendChild(document.createTextNode(item[0]));
